@@ -31,104 +31,203 @@ This repository contains practical source code extracted from:
 
 ---
 
-## PDF Practical Steps (As per PDF Flow)
+## PDF Practical Steps (From Beginning, PDF Style)
 
 ### Practical 1 - StudentProfileViewer
-1. Create project: `StudentProfileViewer` (Java, min SDK 21, Empty Views Activity).
-2. Replace `activity_main.xml` with student input form (name, roll, course, email, button).
-3. Create `ProfileActivity` and set `activity_profile.xml` with output TextViews.
-4. Add `LoggingService.java` for logging profile access.
-5. Update `MainActivity.java` to send data by Intent to `ProfileActivity`.
-6. In `ProfileActivity.java`, receive data, display it, and start service.
-7. Register service in manifest: `<service android:name=".LoggingService" />`.
-8. Run and verify Logcat with `LoggingService` tag.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `StudentProfileViewer`
+   - Package: `com.example.studentprofileviewer`
+   - Language: `Java`
+   - Minimum SDK: `API 21`
+3. Replace `activity_main.xml` with student input form UI.
+4. Create new activity: `ProfileActivity` and set `activity_profile.xml`.
+5. Create new Java class: `LoggingService.java`.
+6. Replace `MainActivity.java`, `ProfileActivity.java`, `LoggingService.java` with provided code.
+7. Add service in manifest inside `<application>`:
+   - `<service android:name=".LoggingService" />`
+8. Run app -> enter details -> click `View Profile` -> verify Logcat tag `LoggingService`.
 
 ### Practical 2.1 - Custom Colors
-1. Create project: `Practical2_1_CustomColors` (Java, min SDK 21).
-2. Set custom colors in `res/values/colors.xml`.
-3. Set `activity_main.xml` with single `TextView`.
-4. In `MainActivity.java`, apply background/text colors using resource IDs.
-5. Run and verify colored text output.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `Practical2_1_CustomColors`
+   - Language: `Java`
+   - Minimum SDK: `API 21`
+3. Open `res/values/colors.xml` and add custom colors.
+4. Replace `res/layout/activity_main.xml` with TextView layout.
+5. Replace `MainActivity.java` to apply colors from resources.
+6. Run app and verify orange background/white text output.
 
 ### Practical 2.2 - ResourceDemoApp
-1. Create project: `ResourceDemoApp` (Java, min SDK 21).
-2. Add strings in `res/values/strings.xml` for light/dark mode text and button labels.
-3. Add color resources in `res/values/colors.xml`.
-4. Replace `activity_main.xml` with `RelativeLayout`, center text and bottom toggle button.
-5. In `MainActivity.java`, toggle light/dark mode with button click.
-6. Run and verify text/background/button label changes.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `ResourceDemoApp`
+   - Language: `Java`
+   - Minimum SDK: `API 21`
+3. Update `res/values/strings.xml` with light/dark text and button labels.
+4. Update `res/values/colors.xml` with light/dark colors.
+5. Replace `res/layout/activity_main.xml` with RelativeLayout and toggle button.
+6. Replace `MainActivity.java` with dark/light mode toggle logic.
+7. Run app and test button toggles both UI modes.
 
-### Practical 2.3 - CollegeNoticeApp (Drawable + Dimens)
-1. Create project: `CollegeNoticeApp` (Java, min SDK 21).
-2. Add drawable resource (`logo`) in `res/drawable`.
-3. Create `res/values/dimens.xml` and define size/padding/text dimensions.
-4. Replace `activity_main.xml` using `ImageView` + `TextView` and `@dimen` values.
-5. Keep default `MainActivity.java`.
-6. Run and verify consistent spacing and sizing.
+### Practical 2.3 - CollegeNoticeApp
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `CollegeNoticeApp`
+   - Package: `com.example.collegenoticeapp`
+   - Language: `Java`
+   - Minimum SDK: `API 21`
+3. Add image in `res/drawable` (`logo`) or keep provided drawable placeholder.
+4. Create `res/values/dimens.xml` and add all dimension values.
+5. Replace `res/layout/activity_main.xml` using `@dimen` references.
+6. Keep default `MainActivity.java` (or provided equivalent).
+7. Run app and verify spacing/sizing consistency.
 
 ### Practical 4.1 - StudentProfileLinearLayout
-1. Create project: `StudentProfileLinearLayout`.
-2. Replace `activity_main.xml` with vertical + horizontal `LinearLayout` rows for student details.
-3. Keep default `MainActivity.java` (static UI practical).
-4. Run and verify layout orientation concepts.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `StudentProfileLinearLayout`
+   - Package: `com.example.studentprofile`
+   - Language: `Java`
+3. Replace `res/layout/activity_main.xml` with LinearLayout student profile design.
+4. Keep default `MainActivity.java`.
+5. Run app and verify vertical + horizontal orientation.
 
 ### Practical 4.2 - LoginRelativeLayout
-1. Create project: `LoginRelativeLayout`.
-2. Replace `activity_main.xml` with title, username, password, login button in `RelativeLayout`.
-3. Keep/set `MainActivity.java` with `setContentView`.
-4. Run and verify relative positioning.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `LoginRelativeLayout`
+   - Package: `com.example.loginrelativelayout`
+   - Language: `Java`
+3. Replace `res/layout/activity_main.xml` with RelativeLayout login screen.
+4. Keep/replace `MainActivity.java` with basic `setContentView` activity.
+5. Run app and verify relative positioning of controls.
 
 ### Practical 4.3 - MarkSheetTableLayout
-1. Create project: `MarkSheetTableLayout`.
-2. Replace `activity_main.xml` with `TableLayout` for subject/marks rows.
-3. Keep default activity logic (UI-only practical).
-4. Run and verify table output.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `MarkSheetTableLayout`
+   - Language: `Java`
+3. Replace `res/layout/activity_main.xml` with TableLayout mark-sheet UI.
+4. Keep default `MainActivity.java`.
+5. Run app and verify rows/columns display correctly.
 
 ### Practical 4.4 - ContactListViewApp
-1. Create project: `ContactListViewApp`.
-2. Replace `activity_main.xml` with EditText + Add button + ListView.
-3. In `MainActivity.java`, use `ArrayList` + `ArrayAdapter`.
-4. On add click, append name to list and refresh adapter.
-5. Run and verify dynamic list entries.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `ContactListViewApp`
+   - Package: `com.example.contactlistviewapp`
+   - Language: `Java`
+3. Replace `res/layout/activity_main.xml` with EditText + Add + ListView.
+4. Replace `MainActivity.java` with ArrayList + ArrayAdapter logic.
+5. Run app and add contacts dynamically.
 
 ### Practical 4.5 - DynamicGridViewApp
-1. Create project: `DynamicGridViewApp`.
-2. Replace `activity_main.xml` with EditText + button + GridView (`numColumns=2`).
-3. In `MainActivity.java`, use `ArrayList` + `ArrayAdapter` for grid.
-4. On add click, insert item and refresh adapter.
-5. Run and verify dynamic grid entries.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `DynamicGridViewApp`
+   - Package: `com.example.dynamicgridviewapp`
+   - Language: `Java`
+3. Replace `res/layout/activity_main.xml` with EditText + Button + GridView.
+4. Replace `MainActivity.java` with dynamic grid adapter logic.
+5. Run app and verify items are added in grid format.
 
 ### Practical 8.1 - StartedServiceCounter
-1. Create project: `StartedServiceCounter`.
-2. Create `CounterService.java` with `Handler`/`Runnable` counter logging every second.
-3. Register service in manifest (`android:exported="false"`).
-4. Replace `activity_main.xml` with Start/Stop service buttons.
-5. Update `MainActivity.java` to `startService()` and `stopService()`.
-6. Run and verify counter logs in Logcat (`CounterService`).
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `StartedServiceCounter`
+   - Package: `com.example.startedservicecounter`
+   - Language: `Java`
+   - Minimum SDK: `API 21`
+3. Create Java class `CounterService.java` and paste service code.
+4. Register service in manifest:
+   - `<service android:name=".CounterService" android:enabled="true" android:exported="false" />`
+5. Replace `activity_main.xml` with Start/Stop buttons.
+6. Replace `MainActivity.java` with `startService()`/`stopService()` logic.
+7. Run app and verify counter logs in Logcat (`CounterService`).
 
 ### Practical 8.2 - Notification
-1. Create project: `Notification`.
-2. Replace `activity_main.xml` with `Generate Notification` button.
-3. In `MainActivity.java`, create notification channel and build notification on click.
-4. Add `POST_NOTIFICATIONS` permission in manifest.
-5. Run and verify notification panel output and click behavior.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `Notification`
+   - Package: `com.example.notification`
+   - Language: `Java`
+3. Replace `activity_main.xml` with notification button.
+4. Replace `MainActivity.java` with channel + notification builder code.
+5. Add manifest permission:
+   - `<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />`
+6. Run app -> click button -> check notification tray.
 
 ### Practical 9 - SQLiteDemo
-1. Create project: `SQLiteDemo`.
-2. Create `DatabaseHelper.java` extending `SQLiteOpenHelper`.
-3. Add methods: insert, view all, update, delete.
-4. Replace `activity_main.xml` with ID/Name/Marks fields and action buttons.
-5. In `MainActivity.java`, wire button listeners to DB operations.
-6. Run and test insert/view/update/delete flow.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `SQLiteDemo`
+   - Package: `com.example.sqlitedemo`
+   - Language: `Java`
+   - Minimum SDK: `API 21`
+3. Create class `DatabaseHelper.java` and paste SQLite helper code.
+4. Replace `activity_main.xml` with ID/Name/Marks fields and CRUD buttons.
+5. Replace `MainActivity.java` with insert/view/update/delete handlers.
+6. Run app and test all CRUD operations.
 
 ### Practical 10 - CameraPermissionApp
-1. Create project: `CameraPermissionApp` (min SDK 23+).
-2. Add camera permission in manifest.
-3. Replace `activity_main.xml` with request permission button.
-4. In `MainActivity.java`, check permission, request if needed, and handle callback.
-5. Run and verify granted/denied toast messages.
+1. Open Android Studio -> `New Project` -> `Empty Views Activity`.
+2. Project config:
+   - Name: `CameraPermissionApp`
+   - Package: `com.example.camerapermissionapp`
+   - Language: `Java`
+   - Minimum SDK: `API 23+`
+3. Add permission in manifest:
+   - `<uses-permission android:name="android.permission.CAMERA" />`
+4. Replace `activity_main.xml` with `Request Camera Permission` button.
+5. Replace `MainActivity.java` with runtime permission check/request/callback.
+6. Run app and verify granted/denied toast messages.
 
 ---
 
 ## Note
 This repository stores practical source files by practical folder. Some folders are code/resource sets and may need standard Android Studio project scaffolding (Gradle files, themes, manifests) when recreated as full runnable projects.
+
+## SDK/Version Setup (Where To Change)
+
+### In Android Studio (UI Method)
+1. Open project in Android Studio.
+2. Go to `File` -> `Project Structure`.
+3. Open `Project` tab:
+   - `Project SDK` / `Android Gradle Plugin` compatibility
+4. Open `Modules` -> `app`:
+   - `Compile SDK Version`
+   - `Min SDK Version`
+   - `Target SDK Version`
+5. Click `Apply` -> `OK` -> `Sync Now`.
+
+### In Gradle Files (Code Method)
+Open `app/build.gradle` (or `app/build.gradle.kts`) and set:
+```gradle
+android {
+    compileSdk 35
+    defaultConfig {
+        minSdk 21
+        targetSdk 35
+    }
+}
+```
+Use installed SDK values on your PC.  
+For `Practical 10 (CameraPermissionApp)`, keep `minSdk` as `23` or above.
+
+### Where To Fix Other Common Issues
+1. Manifest errors:
+   - File: `app/src/main/AndroidManifest.xml`
+   - Add missing `activity`, `service`, `uses-permission` entries.
+2. Theme/style errors:
+   - Files: `res/values/themes.xml`, `res/values/styles.xml`
+   - Ensure manifest theme exists (for example `@style/Theme.AppName`).
+3. Package mismatch:
+   - Java package at top of `.java` file must match app package structure.
+4. Notification issues (Practical 8.2):
+   - Add `POST_NOTIFICATIONS` permission in manifest.
+   - On Android 13+, notification runtime permission may be required.
+5. Camera permission issues (Practical 10):
+   - Add camera permission in manifest.
+   - Keep runtime permission code and callback in `MainActivity`.
