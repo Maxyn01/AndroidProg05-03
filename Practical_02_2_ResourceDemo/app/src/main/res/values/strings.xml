@@ -1,0 +1,1 @@
+﻿<resources><string name="app_name">ResourceDemoApp</string><string name="light_mode_text">Welcome to Resource Demo</string><string name="dark_mode_text">Dark Mode Activated</string><string name="btn_dark">Switch to Dark Mode</string><string name="btn_light">Switch to Light Mode</string></resources>
